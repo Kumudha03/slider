@@ -2,14 +2,15 @@
 body{
     min-height: 100vh;
     align-content: center;
-    
+    font-family: "Roboto",sans-serif;
+    background-color: rgb(201, 214, 255);
 }
 
 .container{
 position:relative;
 max-width:30rem;
 margin: auto;
-background-color: rgb(169, 196, 234);
+background-color: rgb(151, 184, 230);
 border-radius: 20px;
 }
 
@@ -21,6 +22,15 @@ scroll-behavior:smooth;
 border-radius:0.5rem;
 box-sizing: border-box;
 
+}
+
+h3{
+    font-size: 2rem;
+}
+
+p{
+    font-size: 1rem;
+    font-weight: 400;
 }
 
 .slider-wrapper::-webkit-scrollbar{
@@ -51,28 +61,27 @@ position:absolute;
 bottom:1.25rem;
 left:50%;
 transform:translateX(-50%);
-
 align-items: center;
 }
 
 .pre,.nxt{
 width:2rem;
 height:100%;
-
 position: absolute;
 top:0;
 cursor:pointer;
-background-color:grey;
+background-color:transparent;
 align-content:center ;
-justify-content: center;
 }
 
 .pre{
 left:0;
+margin-left: .5rem;
 }
 
 .nxt{
 right:0;
+margin-right: -.5rem;
 }
 
 .fa-solid{
@@ -110,9 +119,21 @@ border: .5px solid white;
     height: .6rem;
 }
 
+input{
+    display: none;
+}
+
 input:checked+.slide{
     
     left:0;
 }
 
+@media screen and (max-width:550px) {
+    .nav, .pre, .nxt{
+        display: none;
+    }
 
+    p{
+        font-size: 1.5rem;
+    }
+}
